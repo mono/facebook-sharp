@@ -1,0 +1,3 @@
+2007-03-16 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/Tag.cs: remove ugly characters
+
