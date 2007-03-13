@@ -1,0 +1,24 @@
+Last updated: 2006-07-27
+
+README for smugmug-sharp
+---------------------------
+smugmug-sharp is a .NET library that lets you log in to SmugMug and use
+their services programmatically.
+
+You can create albums, categories, upload files and request information.
+
+
+* Directory Layout
+------------------
+
+	docs/
+		Monodoc documentation for the library
+
+	sample/
+		Sample programs using the library
+
+	src/
+		Source files for the library
+
+Maintainer: thomas.vanmachelen@gmail.com
+

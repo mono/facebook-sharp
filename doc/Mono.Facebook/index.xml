@@ -1,0 +1,41 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="Mono.Facebook" Version="0.1.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Novell, Inc.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("(c) 2007 Novell, Inc.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("Mono.Facebook")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>To be added.</Remarks>
+  <Copyright>To be added.</Copyright>
+  <Types>
+    <Namespace Name="Mono.Facebook">
+      <Type Name="Album" />
+      <Type Name="SessionWrapper" />
+      <Type Name="FacebookParam" />
+      <Type Name="FacebookSession" />
+      <Type Name="Photo" />
+      <Type Name="SessionInfo" />
+      <Type Name="AlbumsResponse" />
+      <Type Name="PhotosResponse" />
+      <Type Name="PhotoTagsResponse" />
+      <Type Name="Tag" />
+      <Type Name="Util" />
+    </Namespace>
+  </Types>
+  <Title>Mono.Facebook</Title>
+</Overview>

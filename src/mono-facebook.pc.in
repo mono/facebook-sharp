@@ -1,0 +1,8 @@
+prefix=@prefix@
+assemblies_dir=${prefix}/lib/Mono.Facebook
+Libraries=${assemblies_dir}/Mono.Facebook.dll
+ 
+Name: Mono.Facebook
+Description: Mono.Facebook.dll - 
+Version: 0.1
+Libs: -r:${assemblies_dir}/Mono.Facebook.dll
