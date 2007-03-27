@@ -1,3 +1,7 @@
+2007-03-27 George Talusan <george@convolve.ca>
+	* src/Mono.Facebook/Util.cs: fix the way the response stream is read,
+	the old implementation sometimes caused the deserialization to fail
+
 2007-03-16 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/Tag.cs: remove ugly characters
 

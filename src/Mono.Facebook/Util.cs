@@ -157,15 +157,10 @@ namespace Mono.Facebook
 			try
 			{
 				response = request.GetResponse ();
-				Stream response_stream = response.GetResponseStream ();
-
-				List<byte> byte_list = new List<byte>();
-				int b;
-
-				while ((b = response_stream.ReadByte ()) != -1)
-					byte_list.Add ((byte)b);
-
-				return byte_list.ToArray ();
+				using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
+		                {
+					return Encoding.UTF8.GetBytes(reader.ReadToEnd());
+		                }
 			}
 			finally
 			{
