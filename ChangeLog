@@ -1,3 +1,38 @@
+2007-03-30 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	A big code drop to implement the missing methods of the facebook api.
+	This work is a merge of my work with various pieces of code by George
+	Talusan (george@convolve.ca) which improved mine.  Thank you, George.
+
+	* src/Mono.Facebook/Album.cs: 
+		use static method to create parameters
+
+	* src/Mono.Facebook/Event.cs:
+	* src/Mono.Facebook/Friend.cs:
+	* src/Mono.Facebook/FriendInfo.cs:
+	* src/Mono.Facebook/Group.cs:
+	* src/Mono.Facebook/FacebookSession.cs:
+	* src/Mono.Facebook/Location.cs:
+	* src/Mono.Facebook/Notification.cs:
+	* src/Mono.Facebook/PeopleList.cs:
+	* src/Mono.Facebook/Responses.cs:
+	* src/Mono.Facebook/User.cs:
+		Add methods and classes for retrieving information for events, 
+		friends, groups, notifications and users.  This way the 
+		following methods are also implemented now:
+
+	* src/Makefile.am: add new files to build
+
+	* src/Mono.Facebook/FacebookParam.cs:
+		Add support for handling arrays as value and hide constructor
+		so that one needs to call FacebookParam.Create to obtain a
+		parameter
+
+	* examples/GetFriends.cs:
+	* examples/GetEvents.cs:
+	* examples/Makefile.am:
+		Added examples by George Talusan to demonstrate the new
+		methods
+
 2007-03-27 George Talusan <george@convolve.ca>
 	* src/Mono.Facebook/Util.cs: fix the way the response stream is read,
 	the old implementation sometimes caused the deserialization to fail

@@ -1,5 +1,5 @@
 //
-// Mono.Facebook.Albums.cs:
+// Mono.Facebook.Album.cs:
 //
 // Authors:
 //	Thomas Van Machelen (thomas.vanmachelen@gmail.com)
@@ -73,7 +73,8 @@ namespace Mono.Facebook
 
 		public Photo[] GetPhotos ()
 		{ 
-			PhotosResponse rsp = Session.Util.GetResponse<PhotosResponse> ("facebook.photos.get", new FacebookParam ("aid", AId),
+			PhotosResponse rsp = Session.Util.GetResponse<PhotosResponse> ("facebook.photos.get", 
+				FacebookParam.Create ("aid", AId),
 				FacebookParam.Create ("session_key", Session.SessionKey),
 				FacebookParam.Create ("call_id", DateTime.Now.Ticks));
 
@@ -94,7 +95,8 @@ namespace Mono.Facebook
 				pids.Append (p.PId);
 			}
 
-			PhotoTagsResponse rsp = Session.Util.GetResponse<PhotoTagsResponse> ("facebook.photos.getTags", new FacebookParam ("pids", pids),
+			PhotoTagsResponse rsp = Session.Util.GetResponse<PhotoTagsResponse> ("facebook.photos.getTags", 
+				FacebookParam.Create ("pids", pids),
 				FacebookParam.Create ("session_key", Session.SessionKey),
 				FacebookParam.Create ("call_id", System.DateTime.Now.Ticks));
 
@@ -114,3 +116,4 @@ namespace Mono.Facebook
 		}
 	}
 }
+

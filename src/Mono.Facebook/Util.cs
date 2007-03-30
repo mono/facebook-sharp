@@ -70,7 +70,13 @@ namespace Mono.Facebook
 			byte[] response_bytes = GetResponseBytes (url);
 
 			XmlSerializer response_serializer = new XmlSerializer (typeof (T));
-			return (T)response_serializer.Deserialize (new MemoryStream (response_bytes));
+			try {
+				T response = (T)response_serializer.Deserialize(new MemoryStream(response_bytes));
+				return response;
+			}
+			catch {
+				throw new FacebookException(Encoding.Default.GetString(response_bytes));
+			}
 		}
 
 		public XmlDocument GetResponse (string method_name, params FacebookParam[] parameters)

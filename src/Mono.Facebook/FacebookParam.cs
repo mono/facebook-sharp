@@ -3,6 +3,7 @@
 //
 // Authors:
 //	Thomas Van Machelen (thomas.vanmachelen@gmail.com)
+//	George Talusan (george@convolvce.ca)
 //
 // (C) Copyright 2007 Novell, Inc. (http://www.novell.com)
 //
@@ -27,6 +28,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 using System;
+using System.Text;
 
 namespace Mono.Facebook
 {
@@ -35,17 +37,20 @@ namespace Mono.Facebook
 		private string name;
 		private object value;
 
-		public string Name
-		{
-			get { return name; }
+		public string Name {
+			get{ return name; }
 		}
 
-		public object Value
-		{
-			get { return value; }
+		public string Value {
+			get {
+				if (value is Array)
+					return ConvertArrayToString (value as Array);
+				else
+					return value.ToString ();
+			}
 		}
 
-		public FacebookParam (string name, object value)
+		protected FacebookParam (string name, object value)
 		{
 			this.name = name;
 			this.value = value;
@@ -68,5 +73,20 @@ namespace Mono.Facebook
 
 			return this.name.CompareTo ((obj as FacebookParam).name);
 		}
+
+		private static string ConvertArrayToString (Array a)
+		{
+			StringBuilder builder = new StringBuilder ();
+
+			for (int i = 0; i < a.Length; i++) {
+				if (i > 0)
+					builder.Append (",");
+
+				builder.Append (a.GetValue (i).ToString ());
+			}
+
+			return builder.ToString ();
+		}
 	}
 }
+
