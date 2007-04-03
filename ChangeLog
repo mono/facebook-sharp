@@ -1,3 +1,6 @@
+2007-04-03 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* doc/*: update documentation to reflect additions to the library
+
 2007-03-30 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	A big code drop to implement the missing methods of the facebook api.
 	This work is a merge of my work with various pieces of code by George

@@ -12,76 +12,38 @@
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public FacebookSession (string api_key, string shared_secret);" />
       <MemberType>Constructor</MemberType>
-      <Parameters>
-        <Parameter Name="api_key" Type="System.String" />
-        <Parameter Name="shared_secret" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="api_key">To be added.</param>
-        <param name="shared_secret">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Parameters><Parameter Name="api_key" Type="System.String" /><Parameter Name="shared_secret" Type="System.String" /></Parameters>
+      <Docs><param name="api_key">To be added.</param><param name="shared_secret">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="CreateAlbum">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Album CreateAlbum (string name, string description, string location);" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Album</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="description" Type="System.String" />
-        <Parameter Name="location" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="name">To be added.</param>
-        <param name="description">To be added.</param>
-        <param name="location">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Album</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="name" Type="System.String" /><Parameter Name="description" Type="System.String" /><Parameter Name="location" Type="System.String" /></Parameters>
+      <Docs><param name="name">To be added.</param><param name="description">To be added.</param><param name="location">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="CreateToken">
       <MemberSignature Language="C#" Value="public Uri CreateToken ();" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Uri</ReturnType>
-      </ReturnValue>
+      <ReturnValue><ReturnType>System.Uri</ReturnType></ReturnValue>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="GetAlbums">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Album[] GetAlbums ();" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Album[]</ReturnType>
-      </ReturnValue>
+      <ReturnValue><ReturnType>Mono.Facebook.Album[]</ReturnType></ReturnValue>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="GetSession">
       <MemberSignature Language="C#" Value="public void GetSession ();" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
+      <ReturnValue><ReturnType>System.Void</ReturnType></ReturnValue>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
-  </Members>
+  <Member MemberName="AreFriends"><MemberSignature Language="C#" Value="public bool AreFriends (Mono.Facebook.Friend friend1, Mono.Facebook.Friend friend2);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue><Parameters><Parameter Name="friend1" Type="Mono.Facebook.Friend" /><Parameter Name="friend2" Type="Mono.Facebook.Friend" /></Parameters><Docs><param name="friend1">To be added.</param><param name="friend2">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="AreFriends"><MemberSignature Language="C#" Value="public bool AreFriends (long uid1, long uid2);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue><Parameters><Parameter Name="uid1" Type="System.Int64" /><Parameter Name="uid2" Type="System.Int64" /></Parameters><Docs><param name="uid1">To be added.</param><param name="uid2">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="AreFriends"><MemberSignature Language="C#" Value="public Mono.Facebook.FriendInfo[] AreFriends (long[] uids1, long[] uids2);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.FriendInfo[]</ReturnType></ReturnValue><Parameters><Parameter Name="uids1" Type="System.Int64[]" /><Parameter Name="uids2" Type="System.Int64[]" /></Parameters><Docs><param name="uids1">To be added.</param><param name="uids2">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetEvents"><MemberSignature Language="C#" Value="public Mono.Facebook.Event[] GetEvents ();" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Event[]</ReturnType></ReturnValue><Parameters /><Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetEvents"><MemberSignature Language="C#" Value="public Mono.Facebook.Event[] GetEvents (Nullable&lt;long&gt; uid, long[] eids, long start_time, long end_time, string rsvp_status);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Event[]</ReturnType></ReturnValue><Parameters><Parameter Name="uid" Type="System.Nullable&lt;System.Int64&gt;" /><Parameter Name="eids" Type="System.Int64[]" /><Parameter Name="start_time" Type="System.Int64" /><Parameter Name="end_time" Type="System.Int64" /><Parameter Name="rsvp_status" Type="System.String" /></Parameters><Docs><param name="uid">To be added.</param><param name="eids">To be added.</param><param name="start_time">To be added.</param><param name="end_time">To be added.</param><param name="rsvp_status">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetFriends"><MemberSignature Language="C#" Value="public Mono.Facebook.Friend[] GetFriends ();" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Friend[]</ReturnType></ReturnValue><Parameters /><Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetGroups"><MemberSignature Language="C#" Value="public Mono.Facebook.Group[] GetGroups ();" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Group[]</ReturnType></ReturnValue><Parameters /><Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetGroups"><MemberSignature Language="C#" Value="public Mono.Facebook.Group[] GetGroups (Nullable&lt;long&gt; uid, long[] gids);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Group[]</ReturnType></ReturnValue><Parameters><Parameter Name="uid" Type="System.Nullable&lt;System.Int64&gt;" /><Parameter Name="gids" Type="System.Int64[]" /></Parameters><Docs><param name="uid">To be added.</param><param name="gids">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetLoggedInUser"><MemberSignature Language="C#" Value="public Mono.Facebook.Me GetLoggedInUser ();" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Me</ReturnType></ReturnValue><Parameters /><Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetNotifications"><MemberSignature Language="C#" Value="public Mono.Facebook.Notifications GetNotifications ();" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.Notifications</ReturnType></ReturnValue><Parameters /><Docs><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetUserInfo"><MemberSignature Language="C#" Value="public Mono.Facebook.User GetUserInfo (long uid);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.User</ReturnType></ReturnValue><Parameters><Parameter Name="uid" Type="System.Int64" /></Parameters><Docs><param name="uid">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="GetUserInfo"><MemberSignature Language="C#" Value="public Mono.Facebook.User[] GetUserInfo (long[] uids, string[] fields);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>Mono.Facebook.User[]</ReturnType></ReturnValue><Parameters><Parameter Name="uids" Type="System.Int64[]" /><Parameter Name="fields" Type="System.String[]" /></Parameters><Docs><param name="uids">To be added.</param><param name="fields">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member><Member MemberName="Query"><MemberSignature Language="C#" Value="public System.Xml.XmlDocument Query (string sql_query);" /><MemberType>Method</MemberType><ReturnValue><ReturnType>System.Xml.XmlDocument</ReturnType></ReturnValue><Parameters><Parameter Name="sql_query" Type="System.String" /></Parameters><Docs><param name="sql_query">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs></Member></Members>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>

@@ -12,59 +12,22 @@
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Util (string api_key, string secret);" />
       <MemberType>Constructor</MemberType>
-      <Parameters>
-        <Parameter Name="api_key" Type="System.String" />
-        <Parameter Name="secret" Type="System.String" />
-      </Parameters>
-      <Docs>
-        <param name="api_key">To be added.</param>
-        <param name="secret">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Parameters><Parameter Name="api_key" Type="System.String" /><Parameter Name="secret" Type="System.String" /></Parameters>
+      <Docs><param name="api_key">To be added.</param><param name="secret">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="GetResponse">
       <MemberSignature Language="C#" Value="public System.Xml.XmlDocument GetResponse (string method_name, Mono.Facebook.FacebookParam[] parameters);" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>System.Xml.XmlDocument</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="method_name" Type="System.String" />
-        <Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]">
-          <Attributes>
-            <Attribute>
-              <AttributeName>System.ParamArray</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="method_name">To be added.</param>
-        <param name="parameters">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>System.Xml.XmlDocument</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="method_name" Type="System.String" /><Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]"><Attributes><Attribute><AttributeName>System.ParamArray</AttributeName></Attribute></Attributes></Parameter></Parameters>
+      <Docs><param name="method_name">To be added.</param><param name="parameters">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="GetResponse&lt;T&gt;">
       <MemberSignature Language="C#" Value="public T GetResponse&lt;T&gt; (string method_name, Mono.Facebook.FacebookParam[] parameters);" />
       <MemberType>Method</MemberType>
-      <ReturnValue>
-        <ReturnType>T</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="method_name" Type="System.String" />
-        <Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]" />
-      </Parameters>
-      <Docs>
-        <typeparam name="T">To be added.</typeparam>
-        <param name="method_name">To be added.</param>
-        <param name="parameters">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>T</ReturnType></ReturnValue>
+      <Parameters><Parameter Name="method_name" Type="System.String" /><Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]" /></Parameters>
+      <Docs><typeparam name="T">To be added.</typeparam><param name="method_name">To be added.</param><param name="parameters">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>
