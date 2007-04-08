@@ -1,3 +1,6 @@
+2007-04-08 George Talusan <george@convolve.ca>
+	* src/Mono.Facebook/FacebookParam.cs: fix array support
+
 2007-04-03 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* doc/*: update documentation to reflect additions to the library
 

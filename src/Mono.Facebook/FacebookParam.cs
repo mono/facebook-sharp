@@ -58,7 +58,7 @@ namespace Mono.Facebook
 
 		public override string ToString ()
 		{
-			return string.Format ("{0}={1}", name, value.ToString ());
+			return string.Format ("{0}={1}", Name, Value);
 		}
 
 		public static FacebookParam Create (string name, object value)
