@@ -43,9 +43,20 @@ namespace Mono.Facebook
 		private const string BOUNDARY = "SoMeTeXtWeWiLlNeVeRsEe";
 		private const string LINE = "\r\n";
 
+		private static XmlSerializer error_serializer;
+
 		private FacebookParam VersionParam = FacebookParam.Create ("v", "1.0");
 		private string api_key;
 		private string secret;
+
+		private static XmlSerializer ErrorSerializer {
+			get {
+				if (error_serializer == null)
+					error_serializer = new XmlSerializer (typeof (Error));
+
+				return error_serializer;
+			} 
+		}
 
 		public Util (string api_key, string secret)
 		{
@@ -75,7 +86,8 @@ namespace Mono.Facebook
 				return response;
 			}
 			catch {
-				throw new FacebookException(Encoding.Default.GetString(response_bytes));
+			 	Error error = (Error) ErrorSerializer.Deserialize (new MemoryStream (response_bytes));
+				throw new FacebookException (error.ErrorCode, error.ErrorMsg);
 			}
 		}
 
@@ -96,7 +108,7 @@ namespace Mono.Facebook
 			FileInfo file = new FileInfo (path);
 
 			if (!file.Exists)
-			 	throw new FacebookException (string.Format ("File on path {0} does not exist", path));
+			 	throw new FileNotFoundException ("Upload file not found", path);
 
 			// create parameter string
 			List<FacebookParam> parameter_list = new List<FacebookParam>();
@@ -150,8 +162,9 @@ namespace Mono.Facebook
 			try {
 				return (Photo)photo_serializer.Deserialize (new MemoryStream (response));
 			} 
-			catch (Exception ex) {
-				throw new FacebookException ("Failed to upload photo", ex);
+			catch {
+			 	Error error = (Error) ErrorSerializer.Deserialize (new MemoryStream (response));
+				throw new FacebookException (error.ErrorCode, error.ErrorMsg);
 			}
 		}
 

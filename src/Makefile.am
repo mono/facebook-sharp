@@ -13,6 +13,7 @@ monofacebook_references=
 monofacebook_sources  = \
 		Mono.Facebook/Album.cs			\
 		Mono.Facebook/AssemblyInfo.cs		\
+		Mono.Facebook/Error.cs			\
 		Mono.Facebook/Event.cs			\
 		Mono.Facebook/FacebookException.cs	\
 		Mono.Facebook/FacebookParam.cs		\

@@ -1,3 +1,13 @@
+2007-04-08 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/Error.cs: 
+		new class to respresent error
+	* src/Mono.Facebook/FacebookException.cs: 
+		represent facebook message better
+		
+	* src/Mono.Facebook/Util.cs:
+		use new exception signature, deserialize
+		the error responses for real
+
 2007-04-08 George Talusan <george@convolve.ca>
 	* src/Mono.Facebook/FacebookParam.cs: fix array support
 

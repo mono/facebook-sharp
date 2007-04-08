@@ -2,7 +2,7 @@
 // Mono.Facebook.FacebookException.cs:
 //
 // Authors:
-//	Thomas Van Machelen (thomas.vanmachelen@gmail.com)
+//	George Talusan (george@convolve.ca)
 //
 // (C) Copyright 2007 Novell, Inc. (http://www.novell.com)
 //
@@ -27,29 +27,17 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 using System;
+using System.Xml.Serialization;
 
-public class FacebookException : Exception 
+namespace Mono.Facebook
 {
-	private int error_code;
-	private string error_message;
-
-	public int ErrorCode {
-		get { return error_code; } 
-	}
-
-	public string ErrorMessage {
-		get { return error_message; }	 
-	}
-
-	public FacebookException (int error_code, string error_message) 
-		: base (CreateMessage (error_code, error_message))
+	[XmlRoot ("error_response", Namespace = "http://api.facebook.com/1.0/", IsNullable = false)]
+	public class Error
 	{
-		this.error_code = error_code;
-		this.error_message = error_message;	 
-	}
+		[XmlElement ("error_code")]
+		public int ErrorCode;
 
-	private static string CreateMessage (int error_code, string error_message)
-	{
-		return string.Format ("Code: {0}, Message: {1}", error_code, error_message); 
+		[XmlElement ("error_msg")]
+		public string ErrorMsg;
 	}
 }
