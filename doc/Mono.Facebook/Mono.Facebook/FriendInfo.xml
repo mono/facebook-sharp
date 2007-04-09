@@ -13,58 +13,28 @@
       <MemberSignature Language="C#" Value="public FriendInfo ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="AreFriends">
       <MemberSignature Language="C#" Value="public bool AreFriends;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("are_friends")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("are_friends")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="UId1">
       <MemberSignature Language="C#" Value="public int UId1;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("uid1")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("uid1")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="UId2">
       <MemberSignature Language="C#" Value="public int UId2;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("uid2")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("uid2")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.Int32</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

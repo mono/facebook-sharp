@@ -54,6 +54,18 @@
       <Type Name="FriendsResponse" />
       <Type Name="AreFriendsResponse" />
       <Type Name="User" />
+      <Type Name="Error" />
+      <Type Name="Affiliation" />
+      <Type Name="Affiliations" />
+      <Type Name="Concentrations" />
+      <Type Name="EducationHistory" />
+      <Type Name="EducationInfo" />
+      <Type Name="HighSchoolInfo" />
+      <Type Name="MeetingFor" />
+      <Type Name="MeetingSex" />
+      <Type Name="Status" />
+      <Type Name="WorkHistory" />
+      <Type Name="WorkInfo" />
     </Namespace>
   </Types>
   <Title>Mono.Facebook</Title>

@@ -1,0 +1,59 @@
+<Type Name="MeetingSex" FullName="Mono.Facebook.MeetingSex">
+  <TypeSignature Language="C#" Value="public class MeetingSex" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Facebook</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeetingSex ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sex">
+      <MemberSignature Language="C#" Value="public string[] Sex { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="sex">
+      <MemberSignature Language="C#" Value="public string[] sex;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("sex")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

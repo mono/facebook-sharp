@@ -12,28 +12,14 @@
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Me (long uid, Mono.Facebook.FacebookSession session);" />
       <MemberType>Constructor</MemberType>
-      <Parameters>
-        <Parameter Name="uid" Type="System.Int64" />
-        <Parameter Name="session" Type="Mono.Facebook.FacebookSession" />
-      </Parameters>
-      <Docs>
-        <param name="uid">To be added.</param>
-        <param name="session">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Parameters><Parameter Name="uid" Type="System.Int64" /><Parameter Name="session" Type="Mono.Facebook.FacebookSession" /></Parameters>
+      <Docs><param name="uid">To be added.</param><param name="session">To be added.</param><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Notifications">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Notifications Notifications { get; };" />
       <MemberType>Property</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Notifications</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Notifications</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

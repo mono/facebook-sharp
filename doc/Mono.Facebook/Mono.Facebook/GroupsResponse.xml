@@ -18,54 +18,27 @@
       <MemberSignature Language="C#" Value="public GroupsResponse ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="group_array">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Group[] group_array;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("group")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Group[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("group")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.Group[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Groups">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Group[] Groups { get; };" />
       <MemberType>Property</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Group[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Group[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="List">
       <MemberSignature Language="C#" Value="public bool List;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlAttribute("list")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlAttribute("list")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.Boolean</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

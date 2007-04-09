@@ -1,0 +1,106 @@
+<Type Name="HighSchoolInfo" FullName="Mono.Facebook.HighSchoolInfo">
+  <TypeSignature Language="C#" Value="public class HighSchoolInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Facebook</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HighSchoolInfo ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GraduationYear">
+      <MemberSignature Language="C#" Value="public int GraduationYear;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("grad_year")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighSchoolOneId">
+      <MemberSignature Language="C#" Value="public int HighSchoolOneId;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("hs1_id")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighSchoolOneName">
+      <MemberSignature Language="C#" Value="public string HighSchoolOneName;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("hs1_info")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighSchoolTwoId">
+      <MemberSignature Language="C#" Value="public int HighSchoolTwoId;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("hs2_id")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighSchoolTwoName">
+      <MemberSignature Language="C#" Value="public string HighSchoolTwoName;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("hs2_info")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

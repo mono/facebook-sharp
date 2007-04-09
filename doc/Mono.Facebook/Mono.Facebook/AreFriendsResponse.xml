@@ -18,26 +18,14 @@
       <MemberSignature Language="C#" Value="public AreFriendsResponse ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="friend_infos">
       <MemberSignature Language="C#" Value="public Mono.Facebook.FriendInfo[] friend_infos;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("friend_info")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.FriendInfo[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("friend_info")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.FriendInfo[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

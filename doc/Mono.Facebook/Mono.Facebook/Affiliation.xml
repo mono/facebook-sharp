@@ -1,0 +1,106 @@
+<Type Name="Affiliation" FullName="Mono.Facebook.Affiliation">
+  <TypeSignature Language="C#" Value="public class Affiliation" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Facebook</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Affiliation ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NId">
+      <MemberSignature Language="C#" Value="public long NId;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("nid")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public string Status;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("status")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("type")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Year">
+      <MemberSignature Language="C#" Value="public string Year;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("year")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

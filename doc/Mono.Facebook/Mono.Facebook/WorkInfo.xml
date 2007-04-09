@@ -1,0 +1,122 @@
+<Type Name="WorkInfo" FullName="Mono.Facebook.WorkInfo">
+  <TypeSignature Language="C#" Value="public class WorkInfo" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Facebook</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WorkInfo ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompanyName">
+      <MemberSignature Language="C#" Value="public string CompanyName;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("company_name")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("description")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDate">
+      <MemberSignature Language="C#" Value="public string EndDate;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("end_date")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Location">
+      <MemberSignature Language="C#" Value="public Mono.Facebook.Location Location;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("location")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Mono.Facebook.Location</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public string Position;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("position")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDate">
+      <MemberSignature Language="C#" Value="public string StartDate;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("start_date")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

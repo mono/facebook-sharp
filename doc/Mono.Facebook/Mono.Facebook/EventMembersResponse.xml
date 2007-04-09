@@ -18,74 +18,35 @@
       <MemberSignature Language="C#" Value="public EventMembersResponse ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Attending">
       <MemberSignature Language="C#" Value="public Mono.Facebook.PeopleList Attending;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("attending")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.PeopleList</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("attending")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.PeopleList</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Declined">
       <MemberSignature Language="C#" Value="public Mono.Facebook.PeopleList Declined;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("declined")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.PeopleList</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("declined")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.PeopleList</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="NotReplied">
       <MemberSignature Language="C#" Value="public Mono.Facebook.PeopleList NotReplied;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("not_replied")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.PeopleList</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("not_replied")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.PeopleList</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Unsure">
       <MemberSignature Language="C#" Value="public Mono.Facebook.PeopleList Unsure;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("unsure")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.PeopleList</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("unsure")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.PeopleList</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

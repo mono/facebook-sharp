@@ -1,11 +1,11 @@
 <Type Name="User" FullName="Mono.Facebook.User">
-  <TypeSignature Language="C#" Value="public class User" />
+  <TypeSignature Language="C#" Value="public class User : Mono.Facebook.Friend" />
   <AssemblyInfo>
     <AssemblyName>Mono.Facebook</AssemblyName>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
-    <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName>Mono.Facebook.Friend</BaseTypeName>
   </Base>
   <Interfaces />
   <Members>
@@ -13,134 +13,57 @@
       <MemberSignature Language="C#" Value="public User ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="AboutMe">
       <MemberSignature Language="C#" Value="public string AboutMe;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("about_me")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("about_me")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Activities">
       <MemberSignature Language="C#" Value="public string Activities;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("activities")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("activities")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Birthday">
       <MemberSignature Language="C#" Value="public string Birthday;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("birthday")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("birthday")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Books">
       <MemberSignature Language="C#" Value="public string Books;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("books")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("books")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="CurrentLocation">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Location CurrentLocation;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("current_location")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Location</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("current_location")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>Mono.Facebook.Location</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="FIELDS">
       <MemberSignature Language="C#" Value="public static readonly string[] FIELDS;" />
       <MemberType>Field</MemberType>
-      <ReturnValue>
-        <ReturnType>System.String[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>System.String[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="FirstName">
       <MemberSignature Language="C#" Value="public string FirstName;" />
       <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("first_name")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.String</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("first_name")</AttributeName></Attribute></Attributes>
+      <ReturnValue><ReturnType>System.String</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
-    <Member MemberName="HomeTown">
-      <MemberSignature Language="C#" Value="public Mono.Facebook.Location HomeTown;" />
-      <MemberType>Field</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>System.Xml.Serialization.XmlElement("hometown_location")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Location</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
+    
     <Member MemberName="Interests">
       <MemberSignature Language="C#" Value="public string Interests;" />
       <MemberType>Field</MemberType>
@@ -593,7 +516,7 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-  </Members>
+  <Member MemberName="affiliations"><MemberSignature Language="C#" Value="public Mono.Facebook.Affiliations affiliations;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("affiliations")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.Affiliations</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Affiliations"><MemberSignature Language="C#" Value="public Mono.Facebook.Affiliation[] Affiliations { get; };" /><MemberType>Property</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.Affiliation[]</ReturnType></ReturnValue><Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs></Member><Member MemberName="EducationHistory"><MemberSignature Language="C#" Value="public Mono.Facebook.EducationHistory EducationHistory;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("education_history")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.EducationHistory</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="HighSchoolInfo"><MemberSignature Language="C#" Value="public Mono.Facebook.HighSchoolInfo HighSchoolInfo;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("hs_info")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.HighSchoolInfo</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="HomeTownLocation"><MemberSignature Language="C#" Value="public Mono.Facebook.Location HomeTownLocation;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("hometown_location")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.Location</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Interests"><MemberSignature Language="C#" Value="public string Interests;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("interests")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="IsAppUser"><MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsAppUser;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("is_app_user", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="LastName"><MemberSignature Language="C#" Value="public string LastName;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("last_name")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="MeetingFor"><MemberSignature Language="C#" Value="public Mono.Facebook.MeetingFor MeetingFor;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("meeting_for")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.MeetingFor</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="MeetingSex"><MemberSignature Language="C#" Value="public Mono.Facebook.MeetingSex MeetingSex;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("meeting_sex")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.MeetingSex</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Movies"><MemberSignature Language="C#" Value="public string Movies;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("movies")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Music"><MemberSignature Language="C#" Value="public string Music;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("music")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Name"><MemberSignature Language="C#" Value="public string Name;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("name")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="NotesCount"><MemberSignature Language="C#" Value="public Nullable&lt;int&gt; NotesCount;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("notes_count", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Pic"><MemberSignature Language="C#" Value="public string Pic;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("pic")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="PicBig"><MemberSignature Language="C#" Value="public string PicBig;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("pic_big")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="PicBigUri"><MemberSignature Language="C#" Value="public Uri PicBigUri { get; };" /><MemberType>Property</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Uri</ReturnType></ReturnValue><Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs></Member><Member MemberName="PicSmall"><MemberSignature Language="C#" Value="public string PicSmall;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("pic_small")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="PicSmallUri"><MemberSignature Language="C#" Value="public Uri PicSmallUri { get; };" /><MemberType>Property</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Uri</ReturnType></ReturnValue><Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs></Member><Member MemberName="PicUri"><MemberSignature Language="C#" Value="public Uri PicUri { get; };" /><MemberType>Property</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Uri</ReturnType></ReturnValue><Docs><summary>To be added.</summary><value>To be added.</value><remarks>To be added.</remarks></Docs></Member><Member MemberName="Political"><MemberSignature Language="C#" Value="public string Political;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("political")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="ProfileUpdateTime"><MemberSignature Language="C#" Value="public Nullable&lt;long&gt; ProfileUpdateTime;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("profile_update_time", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Quotes"><MemberSignature Language="C#" Value="public string Quotes;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("quotes")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="RelationshipStatus"><MemberSignature Language="C#" Value="public string RelationshipStatus;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("relationship_status")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Religion"><MemberSignature Language="C#" Value="public string Religion;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("religion")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Sex"><MemberSignature Language="C#" Value="public string Sex;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("sex")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="SignificantOtherId"><MemberSignature Language="C#" Value="public Nullable&lt;long&gt; SignificantOtherId;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("significant_other_id", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Status"><MemberSignature Language="C#" Value="public Mono.Facebook.Status Status;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("status")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.Status</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="TimeZone"><MemberSignature Language="C#" Value="public Nullable&lt;int&gt; TimeZone;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("timezone", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="Tv"><MemberSignature Language="C#" Value="public string Tv;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("tv")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.String</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="WallCount"><MemberSignature Language="C#" Value="public Nullable&lt;int&gt; WallCount;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("wall_count", IsNullable=true)</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member><Member MemberName="WorkHistory"><MemberSignature Language="C#" Value="public Mono.Facebook.WorkHistory WorkHistory;" /><MemberType>Field</MemberType><Attributes><Attribute><AttributeName>System.Xml.Serialization.XmlElement("work_history")</AttributeName></Attribute></Attributes><ReturnValue><ReturnType>Mono.Facebook.WorkHistory</ReturnType></ReturnValue><Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs></Member></Members>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>

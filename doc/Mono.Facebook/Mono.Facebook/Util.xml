@@ -26,7 +26,7 @@
       <MemberSignature Language="C#" Value="public T GetResponse&lt;T&gt; (string method_name, Mono.Facebook.FacebookParam[] parameters);" />
       <MemberType>Method</MemberType>
       <ReturnValue><ReturnType>T</ReturnType></ReturnValue>
-      <Parameters><Parameter Name="method_name" Type="System.String" /><Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]" /></Parameters>
+      <Parameters><Parameter Name="method_name" Type="System.String" /><Parameter Name="parameters" Type="Mono.Facebook.FacebookParam[]"><Attributes><Attribute><AttributeName>System.ParamArray</AttributeName></Attribute></Attributes></Parameter></Parameters>
       <Docs><typeparam name="T">To be added.</typeparam><param name="method_name">To be added.</param><param name="parameters">To be added.</param><summary>To be added.</summary><returns>To be added.</returns><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>

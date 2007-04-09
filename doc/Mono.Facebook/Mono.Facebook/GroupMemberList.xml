@@ -13,54 +13,31 @@
       <MemberSignature Language="C#" Value="public GroupMemberList ();" />
       <MemberType>Constructor</MemberType>
       <Parameters />
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Admins">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Friend[] Admins;" />
       <MemberType>Field</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Friend[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Friend[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Members">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Friend[] Members;" />
       <MemberType>Field</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Friend[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Friend[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="NotReplied">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Friend[] NotReplied;" />
       <MemberType>Field</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Friend[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Friend[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
     <Member MemberName="Officers">
       <MemberSignature Language="C#" Value="public Mono.Facebook.Friend[] Officers;" />
       <MemberType>Field</MemberType>
-      <ReturnValue>
-        <ReturnType>Mono.Facebook.Friend[]</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
+      <ReturnValue><ReturnType>Mono.Facebook.Friend[]</ReturnType></ReturnValue>
+      <Docs><summary>To be added.</summary><remarks>To be added.</remarks></Docs>
     </Member>
   </Members>
   <Docs>

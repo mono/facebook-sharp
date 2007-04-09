@@ -1,0 +1,59 @@
+<Type Name="Concentrations" FullName="Mono.Facebook.Concentrations">
+  <TypeSignature Language="C#" Value="public class Concentrations" />
+  <AssemblyInfo>
+    <AssemblyName>Mono.Facebook</AssemblyName>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Concentrations ();" />
+      <MemberType>Constructor</MemberType>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="concentration_array">
+      <MemberSignature Language="C#" Value="public string[] concentration_array;" />
+      <MemberType>Field</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlElement("concentration")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConcentrationCollection">
+      <MemberSignature Language="C#" Value="public string[] ConcentrationCollection { get; };" />
+      <MemberType>Property</MemberType>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Xml.Serialization.XmlIgnore</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
