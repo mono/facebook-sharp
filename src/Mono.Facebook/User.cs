@@ -32,7 +32,163 @@ using System.Xml.Serialization;
 
 namespace Mono.Facebook
 {
-	public partial class User
+	public class Affiliation
+	{
+		[XmlElement ("nid")]
+		public long NId;
+
+		[XmlElement ("name")]
+		public string Name;
+
+		[XmlElement ("type")]
+		public string Type;
+
+		[XmlElement ("status")]
+		public string Status;
+
+		[XmlElement ("year")]
+		public string Year;
+	}
+
+	public class Affiliations
+	{
+		[XmlElement ("affiliation")]
+		public Affiliation[] affiliations_array;
+
+		[XmlIgnore ()]
+		public Affiliation[] AffiliationCollection
+		{
+			get { return affiliations_array ?? new Affiliation[0]; }
+		}
+	}
+
+	public class Concentrations
+	{
+		[XmlElement ("concentration")]
+		public string[] concentration_array;
+
+		[XmlIgnore ()]
+		public string[] ConcentrationCollection
+		{
+			get { return concentration_array ?? new string[0]; }
+		}
+	}
+
+	public class EducationHistory
+	{
+		[XmlElement ("education_info")]
+		public EducationInfo[] educations_array;
+
+		[XmlIgnore ()]
+		public EducationInfo[] EducationInfo
+		{
+			get { return educations_array ?? new EducationInfo[0]; }
+		}
+	}
+
+	public class EducationInfo
+	{
+		[XmlElement ("name")]
+		public string Name;
+
+		[XmlElement ("year")]
+		public int Year;
+
+		[XmlElement ("concentrations")]
+		public Concentrations concentrations;
+
+		[XmlIgnore ()]
+		public string[] Concentrations
+		{
+			get { return concentrations.ConcentrationCollection; }
+		}
+	}
+
+	public class HighSchoolInfo
+	{
+		[XmlElement ("hs1_info")]
+		public string HighSchoolOneName;
+
+		[XmlElement ("hs2_info")]
+		public string HighSchoolTwoName;
+
+		[XmlElement ("grad_year")]
+		public int GraduationYear;
+
+		[XmlElement ("hs1_id")]
+		public int HighSchoolOneId;
+
+		[XmlElement ("hs2_id")]
+		public int HighSchoolTwoId;
+	}
+
+	public class MeetingFor
+	{
+		[XmlElement ("seeking")]
+		public string[] seeking;
+
+		[XmlIgnore ()]
+		public string[] Seeking
+		{
+			get { return seeking ?? new string[0]; }
+		}
+	}
+
+	public class MeetingSex
+	{
+		[XmlElement ("sex")]
+		public string[] sex;
+
+		[XmlIgnore ()]
+		public string[] Sex
+		{
+			get { return sex ?? new string[0]; }
+		}
+	}
+
+	public class Status
+	{
+		[XmlElement ("message")]
+		public string Message;
+
+		[XmlElement ("time")]
+		public long Time;
+	}
+
+	public class WorkHistory
+	{
+		[XmlElement ("work_info")]
+		public WorkInfo[] workinfo_array;
+
+		[XmlIgnore ()]
+		public WorkInfo[] WorkInfo
+		{
+			get { return workinfo_array ?? new WorkInfo[0]; }
+		}
+	}
+
+	public class WorkInfo
+	{
+		[XmlElement ("location")]
+		public Location Location;
+
+		[XmlElement ("company_name")]
+		public string CompanyName;
+
+		[XmlElement ("position")]
+		public string Position;
+
+		[XmlElement ("description")]
+		public string Description;
+
+		[XmlElement ("start_date")]
+		public string StartDate;
+
+		[XmlElement ("end_date")]
+		public string EndDate;
+	}
+
+	public class User : Friend
 	{
 		public static readonly string[] FIELDS = { "about_me", "activities", "affiliations", "birthday", "books", 
 			"current_location", "education_history", "first_name", "hometown_location", "interests", "last_name", 
@@ -46,6 +202,25 @@ namespace Mono.Facebook
 		[XmlElement ("activities")]
 		public string Activities;
 
+		[XmlElement ("affiliations")]
+		public Affiliations affiliations;
+
+		[XmlIgnore ()]
+		public Affiliation[] Affiliations
+		{
+			get
+			{
+				if (affiliations == null)
+				{
+					return new Affiliation[0];
+				}
+				else
+				{
+					return affiliations.AffiliationCollection ?? new Affiliation[0];
+				}
+			}
+		}
+
 		[XmlElement ("birthday")]
 		public string Birthday;
 
@@ -55,17 +230,32 @@ namespace Mono.Facebook
 		[XmlElement ("current_location")]
 		public Location CurrentLocation;
 
+		[XmlElement ("education_history")]
+		public EducationHistory EducationHistory;
+
 		[XmlElement ("first_name")]
 		public string FirstName;
 
 		[XmlElement ("hometown_location")]
-		public Location HomeTown;
+		public Location HomeTownLocation;
+
+		[XmlElement ("hs_info")]
+		public HighSchoolInfo HighSchoolInfo;
 
 		[XmlElement ("interests")]
 		public string Interests;
 
+		[XmlElement ("is_app_user", IsNullable = true)]
+		public System.Nullable<bool> IsAppUser;
+
 		[XmlElement ("last_name")]
 		public string LastName;
+
+		[XmlElement ("meeting_for")]
+		public MeetingFor MeetingFor;
+
+		[XmlElement ("meeting_sex")]
+		public MeetingSex MeetingSex;
 
 		[XmlElement ("movies")]
 		public string Movies;
@@ -76,68 +266,47 @@ namespace Mono.Facebook
 		[XmlElement ("name")]
 		public string Name;
 
-		[XmlElement ("notes_count")]
+		[XmlElement ("notes_count", IsNullable = true)]
 		public System.Nullable<int> NotesCount;
 
-		[XmlElement ("notes_countSpecified")]
-		public bool NotesCountSpecified;
-
 		[XmlElement ("pic")]
-		public string pic;
+		public string Pic;
 
-		public Uri Picture
+		[XmlIgnore ()]
+		public Uri PicUri
 		{
-			get
-			{
-				if (pic == string.Empty)
-					return null;
-
-				return new Uri (pic);
-			}
+			get { return new Uri (Pic); }
 		}
 
 		[XmlElement ("pic_big")]
-		public string pic_big;
+		public string PicBig;
 
-		public Uri PictureBig
+		[XmlIgnore ()]
+		public Uri PicBigUri
 		{
-			get 
-			{
-				if (pic_big == string.Empty)
-					return null;
-
-				return new Uri (pic_big);
-			}
+			get { return new Uri (PicBig); }
 		}
 
 		[XmlElement ("pic_small")]
-		public string pic_small;
+		public string PicSmall;
 
-		public Uri PictureSmall
+		[XmlIgnore ()]
+		public Uri PicSmallUri
 		{
-			get 
-			{
-				if (pic_small == string.Empty)
-					return null;
-
-				return new Uri (pic_small);
-			}
+			get { return new Uri (PicSmall); }
 		}
 
 		[XmlElement ("political")]
 		public string Political;
 
-		[XmlElement ("profile_update_time")]
-		public System.Nullable<int> ProfileUpdateTime;
-
-		[XmlElement ("profile_update_timeSpecified")]
-		public bool ProfileUpdateTimeSpecified;
+		[XmlElement ("profile_update_time", IsNullable = true)]
+		public System.Nullable<long> ProfileUpdateTime;
 
 		[XmlElement ("quotes")]
 		public string Quotes;
 
 		[XmlElement ("relationship_status")]
-		public string RelationShipStatus;
+		public string RelationshipStatus;
 
 		[XmlElement ("religion")]
 		public string Religion;
@@ -145,31 +314,22 @@ namespace Mono.Facebook
 		[XmlElement ("sex")]
 		public string Sex;
 
-		[XmlElement ("significant_other_id")]
-		public System.Nullable<int> SignificantOtherId;
+		[XmlElement ("significant_other_id", IsNullable = true)]
+		public System.Nullable<long> SignificantOtherId;
 
-		[XmlElement ("significant_other_idSpecified")]
-		public bool SignificantOtherIdSpecified;
+		[XmlElement ("status")]
+		public Status Status;
 
-		[XmlElement ("timezone")]
-		public System.Nullable<int> Timezone;
-
-		[XmlElement ("timezoneSpecified")]
-		public bool TimezonSpecified;
+		[XmlElement ("timezone", IsNullable = true)]
+		public System.Nullable<int> TimeZone;
 
 		[XmlElement ("tv")]
-		public string TV;
+		public string Tv;
 
-		[XmlElement ("uid")]
-		public int UId;
-
-		[XmlElement ("uidSpecified")]
-		public bool UIdSpecified;
-
-		[XmlElement ("wall_count")]
+		[XmlElement ("wall_count", IsNullable = true)]
 		public System.Nullable<int> WallCount;
 
-		[XmlElement ("wall_countSpecified")]
-		public bool WallCountSpecified;
+		[XmlElement ("work_history")]
+		public WorkHistory WorkHistory;
 	}
 }

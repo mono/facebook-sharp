@@ -1,3 +1,9 @@
+2007-04-09 George Talusan <george@convolve.ca>
+	* src/Mono.Facebook/User.cs: 
+		cover user information better
+	* src/Mono.Facebook/Location.cs:
+		fix up properties a bit
+
 2007-04-08 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/Error.cs: 
 		new class to respresent error
