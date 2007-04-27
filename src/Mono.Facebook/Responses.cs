@@ -42,6 +42,28 @@ namespace Mono.Facebook
 
 		[XmlElement ("secret")]
 		public string Secret;
+
+		[XmlElement ("expires")]
+		public long Expires;
+
+		[XmlIgnore ()]
+		public bool IsInfinite
+		{
+			get { return Expires == 0; }
+		}	
+		
+		public SessionInfo ()
+		{}
+
+		// use this if you want to create a session based on infinite session
+		// credentials
+		public SessionInfo (string session_key, long uid, string secret)
+		{
+			this.SessionKey = session_key;
+			this.UId = uid;
+			this.Secret = secret;
+			this.Expires = 0;
+		}
 	}
 
 	[XmlRoot ("photos_getAlbums_response", Namespace = "http://api.facebook.com/1.0/", IsNullable = false)]

@@ -1,3 +1,15 @@
+2007-04-27 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/FacebookSession:
+		add an extra constructor to restart an infinite session and
+		return the SessionInfo on GetSession if it's an infinite one
+	* src/Mono.Facebook/Responses:
+		add the expires attribute on SessionInfo so we can check for
+		infinite sessions and add an extra constructor to restore the
+		infinite session
+	* examples/Makefile.am:
+	* examples/InfiniteSession.cs:
+		a new example to demonstrate the use of infinite sessions
+
 2007-04-09 George Talusan <george@convolve.ca>
 	* src/Mono.Facebook/User.cs: 
 		cover user information better

@@ -52,9 +52,17 @@ namespace Mono.Facebook
 			get { return session_info.SessionKey; }
 		}
 
+		// use this for plain sessions
 		public FacebookSession (string api_key, string shared_secret)
 		{
 			util = new Util (api_key, shared_secret);
+		}
+
+		// use this if you want to re-start an infinite session
+		public FacebookSession (string api_key, SessionInfo session_info)
+			: this (api_key, session_info.Secret)
+		{
+			this.session_info = session_info;
 		}
 
 		public Uri CreateToken ()
@@ -65,12 +73,15 @@ namespace Mono.Facebook
 			return new Uri (string.Format ("http://www.facebook.com/login.php?api_key={0}&v=1.0&auth_token={1}", util.ApiKey, auth_token));
 		}
 
-		public void GetSession ()
+		public SessionInfo GetSession ()
 		{
 			this.session_info = util.GetResponse<SessionInfo> ("facebook.auth.getSession", 
 				FacebookParam.Create ("auth_token", auth_token));
 			this.util.SharedSecret = session_info.Secret;
+
 			this.auth_token = string.Empty;
+
+		 	return session_info.IsInfinite ? session_info : null;
 		}
 
 		public Album[] GetAlbums ()
