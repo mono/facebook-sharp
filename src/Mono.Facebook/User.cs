@@ -245,8 +245,18 @@ namespace Mono.Facebook
 		[XmlElement ("interests")]
 		public string Interests;
 
-		[XmlElement ("is_app_user", IsNullable = true)]
-		public System.Nullable<bool> IsAppUser;
+		[XmlElement ("is_app_user")]
+		public string is_app_user;
+		
+		public bool IsAppUser {
+			get {
+				try {
+				 	return bool.Parse(is_app_user);
+				} catch {
+					return false; 
+				}
+			} 
+		}
 
 		[XmlElement ("last_name")]
 		public string LastName;
@@ -266,8 +276,8 @@ namespace Mono.Facebook
 		[XmlElement ("name")]
 		public string Name;
 
-		[XmlElement ("notes_count", IsNullable = true)]
-		public System.Nullable<int> NotesCount;
+		[XmlElement ("notes_count")]
+		public int NotesCount;
 
 		[XmlElement ("pic")]
 		public string Pic;
@@ -299,8 +309,8 @@ namespace Mono.Facebook
 		[XmlElement ("political")]
 		public string Political;
 
-		[XmlElement ("profile_update_time", IsNullable = true)]
-		public System.Nullable<long> ProfileUpdateTime;
+		[XmlElement ("profile_update_time")]
+		public long ProfileUpdateTime;
 
 		[XmlElement ("quotes")]
 		public string Quotes;
@@ -314,20 +324,42 @@ namespace Mono.Facebook
 		[XmlElement ("sex")]
 		public string Sex;
 
-		[XmlElement ("significant_other_id", IsNullable = true)]
-		public System.Nullable<long> SignificantOtherId;
+		[XmlElement ("significant_other_id")]
+		public string significant_other_id;
+
+		[XmlIgnore ()]
+		public long SignificantOtherId
+		{
+			get { 
+			 	try {
+				 	return long.Parse (significant_other_id); 
+				} catch {
+					return 0; 
+				}
+			} 
+		}
 
 		[XmlElement ("status")]
 		public Status Status;
 
-		[XmlElement ("timezone", IsNullable = true)]
-		public System.Nullable<int> TimeZone;
+		[XmlElement ("timezone")]
+		public string timezone;
+		
+		public int TimeZone {
+		 	get {
+				try {
+				 	return int.Parse(timezone);
+				} catch {
+					return 0; 
+				}
+			}
+		}
 
 		[XmlElement ("tv")]
 		public string Tv;
 
-		[XmlElement ("wall_count", IsNullable = true)]
-		public System.Nullable<int> WallCount;
+		[XmlElement ("wall_count")]
+		public int WallCount;
 
 		[XmlElement ("work_history")]
 		public WorkHistory WorkHistory;

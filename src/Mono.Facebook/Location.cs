@@ -42,7 +42,7 @@ namespace Mono.Facebook
 		[XmlElement ("country")]
 		public string Country;
 
-		[XmlElement ("zip", IsNullable = true)]
-		public System.Nullable<int> Zip;
+		[XmlElement ("zip")]
+		public string Zip;
 	}
 }

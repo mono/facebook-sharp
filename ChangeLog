@@ -1,3 +1,12 @@
+2007-05-16 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/Location.cs:
+	* src/Mono.Facebook/User.cs: 
+		fix some problems with deserialization, the generic Nullable 
+		fields didn't behave as expected when no data was available 
+		in the xml
+	* examples/GetUser.cs: add an example to easily keep testing this
+		in the future
+
 2007-04-27 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/FacebookSession:
 		add an extra constructor to restart an infinite session and

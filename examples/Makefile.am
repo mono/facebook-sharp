@@ -1,4 +1,4 @@
-SAMPLES=GetAlbums.cs GetFriends.cs GetEvents.cs InfiniteSession.cs
+SAMPLES=GetAlbums.cs GetFriends.cs GetEvents.cs GetUser.cs InfiniteSession.cs
 MCSFLAGS= -debug -nologo -r:Mono.Facebook.dll
 
 EXTRA_DIST=$(SAMPLES)
