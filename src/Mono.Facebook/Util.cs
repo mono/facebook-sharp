@@ -231,5 +231,26 @@ namespace Mono.Facebook
 
 			return list.ToArray ();
 		}
+
+		internal static int GetIntFromString(string input)
+		{
+			try {
+				return int.Parse(input);
+			}
+			catch {
+				return 0;
+			}
+		}
+
+		internal static bool GetBoolFromString(string input)
+		{
+			try {
+				return bool.Parse(input);
+			}
+			catch {
+				return false;
+			}
+		
+		}
 	}
 }

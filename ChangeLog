@@ -1,3 +1,11 @@
+2007-05-25 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/Util.cs:
+		add new utility methods
+	* src/Mono.Facebook/User.cs:
+		make both the notes count and the wall count properties
+		nullable as - apparently - they aren't always filled in 
+		and also use the new util methods
+
 2007-05-16 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/Location.cs:
 	* src/Mono.Facebook/User.cs: 

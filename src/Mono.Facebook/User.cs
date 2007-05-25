@@ -250,11 +250,7 @@ namespace Mono.Facebook
 		
 		public bool IsAppUser {
 			get {
-				try {
-				 	return bool.Parse(is_app_user);
-				} catch {
-					return false; 
-				}
+				return Util.GetBoolFromString(is_app_user);
 			} 
 		}
 
@@ -276,8 +272,15 @@ namespace Mono.Facebook
 		[XmlElement ("name")]
 		public string Name;
 
-		[XmlElement ("notes_count")]
-		public int NotesCount;
+		[XmlElement("notes_count")]
+		public string notes_count;
+
+		[XmlIgnore()]
+		public int NotesCount {
+			get {
+				return Util.GetIntFromString(notes_count);
+			}
+		}
 
 		[XmlElement ("pic")]
 		public string Pic;
@@ -330,13 +333,9 @@ namespace Mono.Facebook
 		[XmlIgnore ()]
 		public long SignificantOtherId
 		{
-			get { 
-			 	try {
-				 	return long.Parse (significant_other_id); 
-				} catch {
-					return 0; 
-				}
-			} 
+			get {
+				return Util.GetIntFromString(significant_other_id);
+			}
 		}
 
 		[XmlElement ("status")]
@@ -346,12 +345,8 @@ namespace Mono.Facebook
 		public string timezone;
 		
 		public int TimeZone {
-		 	get {
-				try {
-				 	return int.Parse(timezone);
-				} catch {
-					return 0; 
-				}
+			get {
+				return Util.GetIntFromString(timezone);
 			}
 		}
 
@@ -359,7 +354,15 @@ namespace Mono.Facebook
 		public string Tv;
 
 		[XmlElement ("wall_count")]
-		public int WallCount;
+		public string wall_count;
+
+		[XmlIgnore()]
+		public int WallCount
+		{
+			get {
+				return Util.GetIntFromString(wall_count);
+			}
+		}
 
 		[XmlElement ("work_history")]
 		public WorkHistory WorkHistory;
