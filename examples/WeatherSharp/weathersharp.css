@@ -1,0 +1,27 @@
+.alert_box {
+	border: 1px solid #FFE222;
+	background-color: #FFFBE2;
+	margin: 10px 100px 0px 100px;
+	padding: 5px; 
+	text-align: center; 
+	font-weight: bold;
+}
+.info_box {
+	border: 1px solid #1E40E4;
+	background-color: #BFCDE4;
+	margin: 0% 15% 0% 15%;
+	padding: 5px; 
+	text-align: center; 
+	font-weight: bold;
+}	
+
+.weather_grid {
+	width: 70%;
+	padding: 5px; 
+	text-align: center;
+}	
+
+.weather_grid td {
+	text-align: center;
+}	
+	

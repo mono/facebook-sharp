@@ -1,0 +1,17 @@
+<Combine name="WeatherSharp" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="WeatherSharp" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="WeatherSharp" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <DeployTargets />
+  <StartMode startupentry="WeatherSharp" single="True">
+    <Execute type="None" entry="WeatherSharp" />
+  </StartMode>
+  <Entries>
+    <Entry filename="./WeatherSharp.mdp" />
+  </Entries>
+</Combine>
