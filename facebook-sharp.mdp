@@ -1,0 +1,47 @@
+<Project name="facebook-sharp" fileversion="2.0" Description="facebook-sharp is a Mono/.NET library that let's you access the &#xA;Facebook Platform services from within a Mono/.NET application &#xA;or an ASP.NET web application.&#xA;&#xA;You can create albums, categories, upload files and request &#xA;information.&#xA;" language="C#" clr-version="Net_2_0" ctype="DotNetProject">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="./bin/Debug" assembly="facebook-sharp" />
+      <Build debugmode="True" target="Library" />
+      <Execution runwithwarnings="True" consolepause="False" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Csc" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="./bin/Release" assembly="facebook-sharp" />
+      <Build debugmode="False" target="Library" />
+      <Execution runwithwarnings="False" consolepause="False" runtime="MsNet" clr-version="Net_2_0" />
+      <CodeGeneration compiler="Csc" warninglevel="4" optimize="True" unsafecodeallowed="False" generateoverflowchecks="True" mainclass="" generatexmldocumentation="True" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <DeployTargets />
+  <Contents>
+    <File name="./" subtype="Directory" buildaction="Nothing" />
+    <File name="./src/Mono.Facebook/Album.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Error.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Event.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/FacebookException.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/FacebookParam.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/FacebookSession.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Friend.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/FriendInfo.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Group.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Location.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Notification.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/PeopleList.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Photo.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Responses.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/SessionWrapper.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Tag.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/User.cs" subtype="Code" buildaction="Compile" />
+    <File name="./src/Mono.Facebook/Util.cs" subtype="Code" buildaction="Compile" />
+    <File name="./examples/GetAlbums.cs" subtype="Code" buildaction="Nothing" />
+    <File name="./examples/GetEvents.cs" subtype="Code" buildaction="Nothing" />
+    <File name="./examples/GetFriends.cs" subtype="Code" buildaction="Nothing" />
+    <File name="./examples/GetUser.cs" subtype="Code" buildaction="Nothing" />
+    <File name="./examples/InfiniteSession.cs" subtype="Code" buildaction="Nothing" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </References>
+</Project>

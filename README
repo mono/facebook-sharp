@@ -1,9 +1,9 @@
-Last updated: 2006-07-27
+Last updated: 2007-07-05
 
-README for smugmug-sharp
+README for facebook-sharp
 ---------------------------
-smugmug-sharp is a .NET library that lets you log in to SmugMug and use
-their services programmatically.
+facebook-sharp is a Mono/.NET library that let's you access the Facebook Platform services
+from within a Mono/.NET application or an ASP.NET web application.
 
 You can create albums, categories, upload files and request information.
 
@@ -14,7 +14,7 @@ You can create albums, categories, upload files and request information.
 	docs/
 		Monodoc documentation for the library
 
-	sample/
+	example/
 		Sample programs using the library
 
 	src/

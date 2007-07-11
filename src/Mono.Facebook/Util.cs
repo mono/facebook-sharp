@@ -48,6 +48,7 @@ namespace Mono.Facebook
 		private FacebookParam VersionParam = FacebookParam.Create ("v", "1.0");
 		private string api_key;
 		private string secret;
+		private bool use_json;
 
 		private static XmlSerializer ErrorSerializer {
 			get {
@@ -63,6 +64,12 @@ namespace Mono.Facebook
 			this.api_key = api_key;
 			this.secret = secret;
 		}
+
+		public bool UseJson
+		{
+			get { return use_json; }
+			set { use_json = value; }
+		}	
 
 		internal string SharedSecret
 		{
