@@ -73,15 +73,25 @@ namespace Mono.Facebook
 			return new Uri (string.Format ("http://www.facebook.com/login.php?api_key={0}&v=1.0&auth_token={1}", util.ApiKey, auth_token));
 		}
 
+		public Uri GetUriForInfiniteToken()
+		{
+			return new Uri(string.Format("http://www.facebook.com/code_gen.php?v=1.0&api_key={0}", util.ApiKey));
+		}
+
 		public SessionInfo GetSession ()
 		{
-			this.session_info = util.GetResponse<SessionInfo> ("facebook.auth.getSession", 
-				FacebookParam.Create ("auth_token", auth_token));
+			return GetSessionFromToken(auth_token);
+		}
+
+		public SessionInfo GetSessionFromToken(string auth_token)
+		{
+			this.session_info = util.GetResponse<SessionInfo>("facebook.auth.getSession",
+					FacebookParam.Create("auth_token", auth_token));
 			this.util.SharedSecret = session_info.Secret;
 
 			this.auth_token = string.Empty;
 
-		 	return session_info.IsInfinite ? session_info : null;
+			return session_info;
 		}
 
 		public Album[] GetAlbums ()
