@@ -43,7 +43,7 @@ namespace Mono.Facebook
 		private const string BOUNDARY = "SoMeTeXtWeWiLlNeVeRsEe";
 		private const string LINE = "\r\n";
 
-		private static XmlSerializer error_serializer;
+		private static Dictionary<int, XmlSerializer> serializer_dict = new Dictionary<int, XmlSerializer>();
 
 		private FacebookParam VersionParam = FacebookParam.Create ("v", "1.0");
 		private string api_key;
@@ -51,11 +51,8 @@ namespace Mono.Facebook
 		private bool use_json;
 
 		private static XmlSerializer ErrorSerializer {
-			get {
-				if (error_serializer == null)
-					error_serializer = new XmlSerializer (typeof (Error));
-
-				return error_serializer;
+			get { 
+				return GetSerializer (typeof (Error)); 
 			} 
 		}
 
@@ -87,7 +84,7 @@ namespace Mono.Facebook
 			string url = FormatGetUrl (method_name, parameters);
 			byte[] response_bytes = GetResponseBytes (url);
 
-			XmlSerializer response_serializer = new XmlSerializer (typeof (T));
+			XmlSerializer response_serializer = GetSerializer (typeof (T));
 			try {
 				T response = (T)response_serializer.Deserialize(new MemoryStream(response_bytes));
 				return response;
@@ -184,9 +181,9 @@ namespace Mono.Facebook
 			{
 				response = request.GetResponse ();
 				using (StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8))
-		                {
+				{
 					return Encoding.UTF8.GetBytes(reader.ReadToEnd());
-		                }
+				}
 			}
 			finally
 			{
@@ -210,6 +207,16 @@ namespace Mono.Facebook
 			}
 
 			return builder.ToString ();
+		}
+
+		private static XmlSerializer GetSerializer (Type t)
+		{
+			int type_hash = t.GetHashCode ();
+
+			if (!serializer_dict.ContainsKey (type_hash))
+				serializer_dict.Add (type_hash, new XmlSerializer (t));
+
+			return serializer_dict[type_hash];
 		}
 
 		internal FacebookParam[] Sign (string method_name, FacebookParam[] parameters)

@@ -1,3 +1,8 @@
+2007-07-26 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
+	* src/Mono.Facebook/Util.cs:
+		keep the serializers in a dictionary so we don't have to
+		create them with each call
+
 2007-07-25 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/FacebookSession.cs:
 		add method so that user can be forced to create an infinite
