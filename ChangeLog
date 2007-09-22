@@ -1,3 +1,7 @@
+2007-09-02 R. Tyler Ballance <tyler@monkeypox.org>
+	* facebook-sharp.build:
+		Add a basic NAnt build script to get around the autogen mess
+
 2007-07-26 Thomas Van Machelen <thomas.vanmachelen@gmail.com>
 	* src/Mono.Facebook/Util.cs:
 		keep the serializers in a dictionary so we don't have to

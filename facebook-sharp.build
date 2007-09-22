@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<project name="facebook-sharp" default="library" basedir=".">
+	<description>
+            NAnt build script for facebook-sharp (aka Mono.Facebook)
+	</description>
+		
+	<property name="debug" value="true" overwrite="false" />
+	<property name="project.name" value="facebook-sharp"/>
+	<property name="project.version" value="1.0.0"/>
+	<property name="library" value="Mono.Facebook.dll"/>
+	<tstamp property="build.date" pattern="yyyyMMdd" verbose="true" />
+	
+	<!-- These are being definde for posterity's sake, as they may change in the future -->
+	<property name="bin_dir" value="bin"/>
+	<property name="src_dir" value="src"/>
+
+    <target name="library" description="Basic facebook-sharp build task">
+		<echo message="Building ${project.name}-${project.version}"/>
+		
+		<csc target="library" output="${bin_dir}/${library}">
+			<sources>
+				<include name="${src_dir}/**.cs"/>
+			</sources>
+			<references>
+			</references>	
+		</csc>	
+	</target>
+</project>
+
