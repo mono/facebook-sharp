@@ -14,6 +14,9 @@
 	<!-- These are being definde for posterity's sake, as they may change in the future -->
 	<property name="bin_dir" value="bin"/>
 	<property name="src_dir" value="src"/>
+    <property name="contrib_dir" value="contrib/"/>
+    <property name="platform_dir" value="Mono.Facebook.Platform"/>
+    <property name="platform_lib" value="Mono.Facebook.Platform.dll"/>
 
     <target name="library" description="Basic facebook-sharp build task">
 		<echo message="Building ${project.name}-${project.version}"/>
@@ -22,9 +25,35 @@
 			<sources>
 				<include name="${src_dir}/**.cs"/>
 			</sources>
-			<references>
-			</references>	
 		</csc>	
 	</target>
+
+    <target name="platform" description="Build the Mono.Facebook.Platform library" >
+        <echo message="Building ${platform_lib}"/>
+
+        <csc target="library" output="${bin_dir}/${platform_lib}">
+            <sources>
+                <include name="${src_dir}/${platform_dir}/**.cs"/>
+            </sources>
+            <references>
+                <include name="System.Web.dll"/>
+                <include name="${contrib_dir}/Newtonsoft.Json.dll"/>
+            </references>
+        </csc>
+    </target>
+
+    <target name="json.net" description="Build Json.NET for Mono.Facebook.Platform">
+        <echo message="Building Json.NET"/>
+
+        <csc target="library" output="${bin_dir}/Newtonsoft.Json.dll">
+            <sources>
+                <include name="contrib/Newtonsoft.Json/**.cs"/>
+            </sources>
+            <references>
+                <include name="System.Web.dll"/>
+
+            </references>
+        </csc>
+    </target>
 </project>
 
