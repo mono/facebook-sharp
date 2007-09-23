@@ -28,12 +28,14 @@
 				<include name="System.Web.dll"/>
 				<include name="System.Web.Services.dll"/>
 				<include name="System.Data.dll"/>
-				<include name="./bin/Mono.Facebook.dll"/>
+                <include name="./${bin_dir}/Mono.Facebook.dll"/>
+                <include name="./${bin_dir}/Mono.Facebook.Platform.dll"/>
+                <include name="./${bin_dir}/Newtonsoft.Json.dll"/>
 			</references>	
 		</csc>	
 	</target>
 
-	<target name="run" description="Runs the xsp2 web server on the port cited above">
+	<target name="run" description="Runs the xsp2 web server on the port cited above" depends="library">
 		<echo message="Starting the xsp2 web server running on port ${xsp_port}"/>
 
 		<exec program="xsp2" failonerror="true" commandline="--port ${xsp_port}"/>

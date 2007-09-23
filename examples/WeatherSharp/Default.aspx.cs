@@ -1,10 +1,12 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Mono.Facebook;
+using Mono.Facebook.Platform;
 
 namespace WeatherSharp
 {	
@@ -31,6 +33,13 @@ namespace WeatherSharp
 			fb_session_key = Request.Params.Get("fb_sig_session_key");
 			forecaster = new WeatherForecast();
 			this.LoadWeatherData();
+
+            Facebook.Instance.ApiKey = fb_api_key;
+            Facebook.Instance.Secret = fb_secret;
+            Facebook.Instance.SessionSetup(fb_uid, fb_session_key);
+            Console.WriteLine(Users.IsAppAdded());
+            Users.GetInfo(new string[]{"pic", "name"});
+            Console.WriteLine(Users.GetLoggedInUser());
 		}	
 		
 		
