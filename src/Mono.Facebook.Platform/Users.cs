@@ -31,15 +31,15 @@ namespace Mono.Facebook.Platform
 
         public static User GetInfo()
         {
-            List<User> users = GetInfo(DefaultFields);
-            if (users.Count > 0)
-                return users[0];
-            else
-                throw new EmptyDataSetException("Facebook returned an empty user-set"); 
+			return GetInfo(DefaultFields);
         }
-        public static List<User> GetInfo(string[] fields)
+        public static User GetInfo(string[] fields)
         {
-            return GetInfo(new string[]{Facebook.Instance.Session.Uid.ToString()}, fields);
+			List<User> users = GetInfo(new string[]{Facebook.Instance.Session.Uid.ToString()}, fields);
+			if (users.Count > 0)
+				return users[0];
+			else
+				throw new EmptyDataSetException("Facebook returned an empty user-set");
         }
         public static List<User> GetInfo(List<long> uids,  List<string> fields)
         {

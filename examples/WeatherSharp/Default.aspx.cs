@@ -5,7 +5,6 @@ using System.Data;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Mono.Facebook;
 using Mono.Facebook.Platform;
 
 namespace WeatherSharp
@@ -22,7 +21,6 @@ namespace WeatherSharp
 		protected string zipcode;
 		protected string city;
 		
-		private FacebookSession session;
 		private WeatherForecast forecaster;
 		private WeatherForecasts weather;
 		
@@ -32,22 +30,20 @@ namespace WeatherSharp
 			fb_uid = Convert.ToInt64(Request.Params.Get("fb_sig_user"));
 			fb_session_key = Request.Params.Get("fb_sig_session_key");
 			forecaster = new WeatherForecast();
-			this.LoadWeatherData();
 
             Facebook.Instance.ApiKey = fb_api_key;
             Facebook.Instance.Secret = fb_secret;
             Facebook.Instance.SessionSetup(fb_uid, fb_session_key);
-            Console.WriteLine(Users.IsAppAdded());
-            Users.GetInfo(new string[]{"pic", "name"});
-            Console.WriteLine(Users.GetLoggedInUser());
+			User user = Users.GetInfo(new string[] {"name", "current_location"});
+
+			LoadWeatherData(user);
 		}	
 		
 		
-		private void LoadWeatherData()
+		private void LoadWeatherData(User user)
 		{
-			User our_user = this.LoadUserInfo();
-			zipcode = our_user.CurrentLocation.Zip;
-			city = our_user.CurrentLocation.City;
+			zipcode = user.current_location.zip;
+			city = user.current_location.city;
 			
 			if (zipcode != "0")
 			{
@@ -59,7 +55,6 @@ namespace WeatherSharp
 			}
 			else
 			{
-				/* Show user error */
 			}
 			
 			if (weather != null)
@@ -67,13 +62,6 @@ namespace WeatherSharp
 				WeatherDataGrid.DataSource = this.GenerateWeatherDataSource(weather);
 				WeatherDataGrid.DataBind();
 			}	
-		}
-		
-		private User LoadUserInfo()
-		{
-			session = new FacebookSession(fb_api_key, new SessionInfo(fb_session_key, fb_uid, fb_secret));
-			
-			return session.GetUserInfo(fb_uid);
 		}
 		
 	    private ICollection GenerateWeatherDataSource(WeatherForecasts weather)

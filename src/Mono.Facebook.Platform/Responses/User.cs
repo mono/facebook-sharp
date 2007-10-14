@@ -22,6 +22,8 @@ namespace Mono.Facebook.Platform
         public string first_name;
         public string last_name;
         public Nullable<int> notes_count;
+		public Location hometown_location;
+		public Location current_location;
         public string pic;
         public string pic_big;
         public string pic_small;
