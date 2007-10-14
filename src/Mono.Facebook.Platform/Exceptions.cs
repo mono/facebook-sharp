@@ -23,5 +23,16 @@ namespace Mono.Facebook.Platform
         {
         }
     }
+
+    public class EmptyDataSetException : Exception
+    {
+        public EmptyDataSetException() : base()
+        {
+        }
+
+        public EmptyDataSetException(string mesg) : base(mesg)
+        {
+        }
+    }
 }
 
