@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Web.Script.Serialization;
 
 namespace Mono.Facebook.Platform
@@ -24,6 +25,7 @@ namespace Mono.Facebook.Platform
         public Nullable<int> notes_count;
 		public Location hometown_location;
 		public Location current_location;
+		public List<Affiliation> affiliations;
         public string pic;
         public string pic_big;
         public string pic_small;

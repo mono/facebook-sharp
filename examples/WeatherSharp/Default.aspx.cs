@@ -34,7 +34,9 @@ namespace WeatherSharp
             Facebook.Instance.ApiKey = fb_api_key;
             Facebook.Instance.Secret = fb_secret;
             Facebook.Instance.SessionSetup(fb_uid, fb_session_key);
-			User user = Users.GetInfo(new string[] {"name", "current_location"});
+			User user = Users.GetInfo(new string[] {"name", "current_location", "affiliations"});
+
+			Console.WriteLine(FQL.Query(String.Format("SELECT name, affiliations FROM user WHERE uid = {0}", fb_uid)));
 
 			LoadWeatherData(user);
 		}	
