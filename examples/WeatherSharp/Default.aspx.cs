@@ -27,18 +27,32 @@ namespace WeatherSharp
 		
 		public virtual void Page_Load(object sender, EventArgs e)
 		{
+            Facebook.Instance.ApiKey = fb_api_key;
+            Facebook.Instance.Secret = fb_secret;
+			if (!Facebook.Instance.RequireAdd(this))
+				return;
+
 			fb_uid = Convert.ToInt64(Request.Params.Get("fb_sig_user"));
 			fb_session_key = Request.Params.Get("fb_sig_session_key");
 			forecaster = new WeatherForecast();
 
-            Facebook.Instance.ApiKey = fb_api_key;
-            Facebook.Instance.Secret = fb_secret;
-            Facebook.Instance.SessionSetup(fb_uid, fb_session_key);
+			///Console.WriteLine(Users.GetInfo());
 			User user = Users.GetInfo(new string[] {"name", "current_location", "affiliations"});
 
-			Console.WriteLine(FQL.Query(String.Format("SELECT name, affiliations FROM user WHERE uid = {0}", fb_uid)));
+			//Console.WriteLine(FQL.Query(String.Format("SELECT name, affiliations FROM user WHERE uid = {0}", fb_uid)));
 
 			LoadWeatherData(user);
+
+			// XXX: Silly load testing stuff
+			/*
+			for (int i = 0; i < 50; ++i)
+			{
+				DateTime start = DateTime.Now;
+				Users.GetInfo();
+				TimeSpan diff = (DateTime.Now - start);
+				Console.WriteLine("Time taken: {0}", diff.Milliseconds);
+			}
+			*/
 		}	
 		
 		
@@ -47,16 +61,18 @@ namespace WeatherSharp
 			zipcode = user.current_location.zip;
 			city = user.current_location.city;
 			
-			if (zipcode != "0")
+			if ( (!String.IsNullOrEmpty(zipcode)) && (zipcode != "0") )
 			{
 				weather = forecaster.GetWeatherByZipCode(zipcode);
 			}
-			else if (city != string.Empty)
+			else if (!String.IsNullOrEmpty(city))
 			{
 				weather = forecaster.GetWeatherByPlaceName(city);
 			}
 			else
 			{
+				weather = null;
+				Console.WriteLine("Couldn't find any location information! D'oh!");
 			}
 			
 			if (weather != null)

@@ -5,6 +5,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using System.Web.UI;
 
 namespace Mono.Facebook.Platform
 {
@@ -203,10 +204,46 @@ namespace Mono.Facebook.Platform
         #endregion
 
         #region "Public Methods"
-        public void SessionSetup(long uid, string session_key)
-        {
-            _session = new UserSession(uid, session_key);
-        }
+		public bool RequireAdd(Page source)
+		{
+			if (String.IsNullOrEmpty(this.ApiKey))
+			{
+				throw new InvalidFacebookObjectException("You must first set the API Key for this application before calling RequireAdd()");
+			}
+			string fb_uid = source.Request.Params.Get("fb_sig_user");
+			string session_key = source.Request.Params.Get("fb_sig_session_key");
+			if (String.IsNullOrEmpty(session_key))
+			{
+				source.Response.Write(this.InstallHTML());
+				source.Response.Write(this.InstallFBML());
+				return false;
+			}
+			else
+			{
+				this.SessionSetup(Convert.ToInt64(fb_uid), session_key);
+				return true;
+			}
+		}
+		public bool RequireLogin(Page source)
+		{
+			if (String.IsNullOrEmpty(this.ApiKey))
+			{
+				throw new InvalidFacebookObjectException("You must first set the API Key for this application before calling RequireAdd()");
+			}
+			string fb_uid = source.Request.Params.Get("fb_sig_user");
+			string session_key = source.Request.Params.Get("fb_sig_session_key");
+			if (String.IsNullOrEmpty(session_key))
+			{
+				source.Response.Write(this.LoginHTML());
+				source.Response.Write(this.LoginFBML());
+				return false;
+			}
+			else
+			{
+				this.SessionSetup(Convert.ToInt64(fb_uid), session_key);
+				return true;
+			}
+		}
         public string MakeRequest(string method)
         {
             return MakeRequest(method, new Dictionary<string, string>());
@@ -289,6 +326,26 @@ namespace Mono.Facebook.Platform
 
             return builtString.ToString();
         }
+        internal void SessionSetup(long uid, string session_key)
+        {
+            _session = new UserSession(uid, session_key);
+        }
+		internal string InstallFBML()
+		{
+			return String.Format("<fb:redirect url=\"http://www.facebook.com/install.php?api_key={0}\"/>", this.ApiKey);
+		}
+		internal string InstallHTML()
+		{
+			return String.Format("<html><head></head><body><script> window.parent.location = 'http://www.facebook.com/install.php?api_key={0}'; </script></body></html>", this.ApiKey);
+		}
+		internal string LoginFBML()
+		{
+			return String.Format("<fb:redirect url=\"http://www.facebook.com/login.php?api_key={0}&v=1.0\"/>", this.ApiKey);
+		}
+		internal string LoginHTML()
+		{
+			return String.Format("<html><head></head><body><script> window.parent.location = 'http://www.facebook.com/login.php?api_key={0}&v=1.0'; </script></body></html>", this.ApiKey);
+		}
         #endregion
     }
 }

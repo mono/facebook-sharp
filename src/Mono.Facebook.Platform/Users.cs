@@ -60,7 +60,6 @@ namespace Mono.Facebook.Platform
             if (Facebook.Instance.Format == ResponseType.Json)
             {
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
-                Console.WriteLine(response);
                 return serializer.Deserialize<List<User>>(response);
             }
 

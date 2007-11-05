@@ -2,6 +2,17 @@ using System;
 
 namespace Mono.Facebook.Platform
 {
+	public class InvalidFacebookObjectException : Exception
+	{
+		public InvalidFacebookObjectException() : base()
+		{
+		}
+
+		public InvalidFacebookObjectException(string mesg) : base(mesg)
+		{
+		}
+	}
+
     public class UnsupportedResponseTypeException : Exception
     {
         public UnsupportedResponseTypeException() : base()
