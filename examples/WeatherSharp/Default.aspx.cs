@@ -40,6 +40,9 @@ namespace WeatherSharp
 			User user = Users.GetInfo(new string[] {"name", "current_location", "affiliations"});
 
 			//Console.WriteLine(FQL.Query(String.Format("SELECT name, affiliations FROM user WHERE uid = {0}", fb_uid)));
+			
+			Profile.SetFbml(String.Format("<strong>Last updated the profile at {0}</strong>", DateTime.Now));
+			Notifications.Get();
 
 			LoadWeatherData(user);
 

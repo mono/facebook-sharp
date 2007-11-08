@@ -5,6 +5,7 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 
 namespace Mono.Facebook.Platform
@@ -23,6 +24,7 @@ namespace Mono.Facebook.Platform
         private UserSession _session;
         private string _response_type = "JSON";
         private string _server_url = _unsecure_server_url;
+		private JavaScriptSerializer _serializer = null;
 
         private Notifications _notifications = null;
         private FQL _fql = null;
@@ -53,6 +55,10 @@ namespace Mono.Facebook.Platform
         {
             get { return _session; }
         }
+		public JavaScriptSerializer Serializer
+		{
+			get { return _serializer; }
+		}
         public string ApiKey
         {
             get { return _api_key; }
@@ -200,6 +206,7 @@ namespace Mono.Facebook.Platform
         #region "Constructors"
         private Facebook()
         {
+			_serializer = new JavaScriptSerializer();
         }
         #endregion
 

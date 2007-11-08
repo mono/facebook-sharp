@@ -22,12 +22,26 @@ namespace Mono.Facebook.Platform
             
             if (Facebook.Instance.Format == ResponseType.Json)
             {
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                return serializer.Deserialize<bool>(response);
+				return Facebook.Instance.Serializer.Deserialize<bool>(response);
             }
 
             throw new NotImplementedException("Looks like that call isn't supported yet");
         }
+
+        public static bool HasAppPermission(string ext_perm)
+        {
+			Dictionary<string, string> parameters = new Dictionary<string, string>();
+			parameters.Add("ext_perm", ext_perm);
+
+			string response = Facebook.Instance.MakeRequest("users.hasAppPermission", parameters);
+            
+            if (Facebook.Instance.Format == ResponseType.Json)
+            {
+				return Facebook.Instance.Serializer.Deserialize<bool>(response);
+            }
+
+            throw new NotImplementedException("Looks like that call isn't supported yet");
+		}
 
         public static User GetInfo()
         {
@@ -59,8 +73,7 @@ namespace Mono.Facebook.Platform
 
             if (Facebook.Instance.Format == ResponseType.Json)
             {
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                return serializer.Deserialize<List<User>>(response);
+				return Facebook.Instance.Serializer.Deserialize<List<User>>(response);
             }
 
             throw new NotImplementedException("Looks like that call isn't supported yet");
@@ -72,8 +85,7 @@ namespace Mono.Facebook.Platform
 
             if (Facebook.Instance.Format == ResponseType.Json)
             {
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                return serializer.Deserialize<Int64>(response);
+				return Facebook.Instance.Serializer.Deserialize<Int64>(response);
             }
 
             throw new NotImplementedException("Looks like that call isn't supported yet");

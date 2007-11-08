@@ -1,0 +1,59 @@
+Currently Mono.Facebook.Platform is still incomplete, here's a list of the entirety of Facebook's platform API calls
+and what's been implemented thus far versus what's left.
+
+There's not a lot of error checking as of now in Mono.Facebook.Platform (2007.11.07) but as soon as the majority of 
+the "core" API calls are supported in JSON, more robust error handling will be added 
+
+Formats:
+--------------
+	[ ] - XML
+	[o] - JSON
+
+
+API Calls:
+--------------
+Key: 
+	[o] = complete
+	[j] = JSON-only
+	[x] = XML-only
+--------------
+	[j] - auth.getSession
+	[ ] - events.get
+	[ ] - events.getMembers
+	[ ] - fbml.refreshImgSrc
+	[ ] - fbml.refreshRefUrl
+	[ ] - fbml.setRefHandle
+	[j] - feed.publishStoryToUser
+	[j] - feed.publishActionOfUser
+	[ ] - feed.publishTemplatizedAction
+	[j] - fql.query
+	[ ] - friends.areFriends
+	[ ] - friends.get
+	[ ] - friends.getAppUsers
+	[ ] - groups.get
+	[ ] - groups.getMembers
+	[ ] - marketplace.createListing
+	[ ] - marketplace.getCategories
+	[ ] - marketplace.getListings
+	[ ] - marketplace.getSubCategories
+	[ ] - marketplace.removeListing
+	[ ] - marketplace.search
+	[ ] - notifications.get
+	[ ] - notifications.send
+	[ ] - photos.addTag
+	[ ] - photos.createAlbum
+	[ ] - photos.get
+	[ ] - photos.getAlbums
+	[ ] - photos.getTags
+	[ ] - photos.upload
+	[j] - profile.setFBML
+	[j] - profile.getFBML
+	[j] - users.getInfo
+	[j] - users.getLoggedInUser
+	[j] - users.hasAppPermission
+	[j] - users.isAppAdded
+	[ ] - users.setStatus
+	[ ] - pages.isAppAdded
+	[ ] - pages.isAdmin
+	[ ] - pages.isFan
+	[ ] - pages.getInfo

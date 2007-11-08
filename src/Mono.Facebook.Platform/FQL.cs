@@ -21,8 +21,7 @@ namespace Mono.Facebook.Platform
             {
 				if (typeof(T) == typeof(string))
 					return (T)Activator.CreateInstance(typeof(T), response.ToCharArray());
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-				return serializer.Deserialize<T>(response);
+				return Facebook.Instance.Serializer.Deserialize<T>(response);
             }
 
             throw new NotImplementedException("Looks like that call isn't supported yet");

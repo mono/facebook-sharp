@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Web.Script.Serialization;
 
 namespace Mono.Facebook.Platform
 {
