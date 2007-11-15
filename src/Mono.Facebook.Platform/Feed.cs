@@ -56,8 +56,9 @@ namespace Mono.Facebook.Platform
 
 			if (Facebook.Instance.Format == ResponseType.Json)
 			{
-				Console.WriteLine("Response: {0}{1}", Environment.NewLine, response);
-				return true;
+				//	NOTE: For some god-forsaken reason, Facebook is (currently) returning a JSON array with a single value, such as this: "[true]"
+				List<bool> resp = Facebook.Instance.Serializer.Deserialize<List<bool>>(response);
+				return resp[0];
 			}
 
 			throw new NotImplementedException("Looks like that call isn't supported yet!");

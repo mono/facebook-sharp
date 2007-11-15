@@ -39,7 +39,7 @@ Key:
 	[ ] - marketplace.removeListing
 	[ ] - marketplace.search
 	[ ] - notifications.get
-	[ ] - notifications.send
+	[j] - notifications.send
 	[ ] - photos.addTag
 	[ ] - photos.createAlbum
 	[ ] - photos.get
