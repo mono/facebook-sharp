@@ -8,14 +8,9 @@ namespace Mono.Facebook.Platform
 		#region "Public Static Methods (Facebook)"
 		public static void Get()
 		{
-			string response = Facebook.Instance.MakeRequest("notifications.get");
+			string response = Facebook.Instance.MakeRequest<string>("notifications.get");
 
-            if (Facebook.Instance.Format == ResponseType.Json)
-            {
-				Console.WriteLine(response);
-            }
-
-            throw new NotImplementedException("Looks like that call isn't supported yet");
+			Console.WriteLine(response);
         }
 
 		public static bool Send(string markup, Int64[] uids)
@@ -30,14 +25,7 @@ namespace Mono.Facebook.Platform
 			parameters.Add("notification", markup);
 			parameters.Add("to_ids", String.Join(",", _uids));
 
-			string response = Facebook.Instance.MakeRequest("notifications.send", parameters);
-
-            if (Facebook.Instance.Format == ResponseType.Json)
-            {
-				return true;
-            }
-
-            throw new NotImplementedException("Looks like that call isn't supported yet");
+			return Facebook.Instance.MakeRequest<bool>("notifications.send", parameters);
 		}
 		#endregion
     }

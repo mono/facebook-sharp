@@ -18,14 +18,7 @@ namespace Mono.Facebook.Platform
 			if (uid > 0)
 				parameters.Add("uid", uid.ToString());
 
-			string response = Facebook.Instance.MakeRequest("profile.setFBML", parameters);
-
-			if (Facebook.Instance.Format == ResponseType.Json)
-			{
-				return Facebook.Instance.Serializer.Deserialize<bool>(response);
-			}
-
-            throw new NotImplementedException("Looks like that call isn't supported yet");
+			return Facebook.Instance.MakeRequest<bool>("profile.setFBML", parameters);
 		}
 
 		public static string GetFbml()
@@ -38,14 +31,7 @@ namespace Mono.Facebook.Platform
 			if (uid > 9)
 				parameters.Add("uid", uid.ToString());
 
-			string response = Facebook.Instance.MakeRequest("profile.getFBML", parameters);
-			
-			if (Facebook.Instance.Format == ResponseType.Json)
-			{
-				return Facebook.Instance.Serializer.Deserialize<String>(response);
-			}
-
-            throw new NotImplementedException("Looks like that call isn't supported yet");
+			return Facebook.Instance.MakeRequest<string>("profile.getFBML", parameters);
 		}
         #endregion
     }

@@ -11,14 +11,7 @@ namespace Mono.Facebook.Platform
 			Dictionary<string, string> parameters = new Dictionary<string, string>();
 			parameters.Add("auth_token", auth_token);
 
-			string response = Facebook.Instance.MakeRequest("auth.getSession", parameters);
-
-			if (Facebook.Instance.Format == ResponseType.Json)
-			{
-				return Facebook.Instance.Serializer.Deserialize<AuthSession>(response);
-			}
-
-            throw new NotImplementedException("Looks like that call isn't supported yet");
+			return Facebook.Instance.MakeRequest<AuthSession>("auth.getSession", parameters);
 		}
 		#endregion
 	}

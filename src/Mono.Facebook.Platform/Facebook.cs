@@ -223,6 +223,7 @@ namespace Mono.Facebook.Platform
 			{
 				source.Response.Write(this.InstallHTML());
 				source.Response.Write(this.InstallFBML());
+				source.Response.Flush();
 				return false;
 			}
 			else
@@ -243,6 +244,7 @@ namespace Mono.Facebook.Platform
 			{
 				source.Response.Write(this.LoginHTML());
 				source.Response.Write(this.LoginFBML());
+				source.Response.Flush();
 				return false;
 			}
 			else
@@ -251,15 +253,15 @@ namespace Mono.Facebook.Platform
 				return true;
 			}
 		}
-        public string MakeRequest(string method)
+		public T MakeRequest<T>(string method)
         {
-            return MakeRequest(method, new Dictionary<string, string>());
+            return MakeRequest<T>(method, new Dictionary<string, string>());
         }
-        public string MakeRequest(string method, Dictionary<string, string> parameters)
+		public T MakeRequest<T>(string method, Dictionary<string, string> parameters)
         {
-            return MakeRequest(method, parameters, string.Empty);
+            return MakeRequest<T>(method, parameters, string.Empty);
         }
-        public string MakeRequest(string method, Dictionary<string, string> parameters, string callback)
+        public T MakeRequest<T>(string method, Dictionary<string, string> parameters, string callback)
         {
             parameters["method"] = method;
             parameters["api_key"] = _api_key;
@@ -288,7 +290,12 @@ namespace Mono.Facebook.Platform
             
             StreamReader reader = new StreamReader(resp.GetResponseStream());
 
-            return reader.ReadToEnd().Trim();
+            string response = reader.ReadToEnd().Trim();
+
+			if (this.Format == ResponseType.Json)
+				return this.Serializer.Deserialize<T>(response);
+			else
+				throw new NotImplementedException("XML Response Types are not currently supported");
         }
         #endregion
 

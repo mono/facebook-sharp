@@ -52,16 +52,11 @@ namespace Mono.Facebook.Platform
 			if (priority > 0)
 				parameters.Add("priority", priority.ToString());
 
-			string response = Facebook.Instance.MakeRequest(String.Format("feed.{0}", itemType), parameters);
-
-			if (Facebook.Instance.Format == ResponseType.Json)
-			{
-				//	NOTE: For some god-forsaken reason, Facebook is (currently) returning a JSON array with a single value, such as this: "[true]"
-				List<bool> resp = Facebook.Instance.Serializer.Deserialize<List<bool>>(response);
+			//	NOTE: For some god-forsaken reason, Facebook is (currently) returning a JSON array with a single value, such as this: "[true]"
+			List<bool> resp = Facebook.Instance.MakeRequest<List<bool>>(String.Format("feed.{0}", itemType), parameters);
+			if (resp.Count > 0)
 				return resp[0];
-			}
-
-			throw new NotImplementedException("Looks like that call isn't supported yet!");
+			return false;
 		}
 		#endregion	
 	}

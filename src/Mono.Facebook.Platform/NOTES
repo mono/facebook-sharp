@@ -20,16 +20,16 @@ Key:
 	[j] - auth.getSession
 	[ ] - events.get
 	[ ] - events.getMembers
-	[ ] - fbml.refreshImgSrc
-	[ ] - fbml.refreshRefUrl
-	[ ] - fbml.setRefHandle
+	[j] - fbml.refreshImgSrc
+	[j] - fbml.refreshRefUrl
+	[j] - fbml.setRefHandle
 	[j] - feed.publishStoryToUser
 	[j] - feed.publishActionOfUser
 	[ ] - feed.publishTemplatizedAction
 	[j] - fql.query
-	[ ] - friends.areFriends
-	[ ] - friends.get
-	[ ] - friends.getAppUsers
+	[j] - friends.areFriends
+	[j] - friends.get
+	[j] - friends.getAppUsers
 	[ ] - groups.get
 	[ ] - groups.getMembers
 	[ ] - marketplace.createListing
