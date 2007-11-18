@@ -217,8 +217,18 @@ namespace Mono.Facebook.Platform
 			{
 				throw new InvalidFacebookObjectException("You must first set the API Key for this application before calling RequireAdd()");
 			}
+
 			string fb_uid = source.Request.Params.Get("fb_sig_user");
 			string session_key = source.Request.Params.Get("fb_sig_session_key");
+
+			if (!String.IsNullOrEmpty(fb_uid))
+			{
+				//	NOTE: Slightly nasty hack to handle Facebook occasionally double-posting the fb_sig_user parameter
+				//	particularly on form submissions
+				string[] fb_uids = fb_uid.Split(new string[] {","}, StringSplitOptions.None);
+				fb_uid = fb_uids[0];
+			}
+
 			if (String.IsNullOrEmpty(session_key))
 			{
 				source.Response.Write(this.InstallHTML());
@@ -238,8 +248,18 @@ namespace Mono.Facebook.Platform
 			{
 				throw new InvalidFacebookObjectException("You must first set the API Key for this application before calling RequireAdd()");
 			}
+
 			string fb_uid = source.Request.Params.Get("fb_sig_user");
 			string session_key = source.Request.Params.Get("fb_sig_session_key");
+
+			if (!String.IsNullOrEmpty(fb_uid))
+			{
+				//	NOTE: Slightly nasty hack to handle Facebook occasionally double-posting the fb_sig_user parameter
+				//	particularly on form submissions
+				string[] fb_uids = fb_uid.Split(new string[] {","}, StringSplitOptions.None);
+				fb_uid = fb_uids[0];
+			}
+
 			if (String.IsNullOrEmpty(session_key))
 			{
 				source.Response.Write(this.LoginHTML());
