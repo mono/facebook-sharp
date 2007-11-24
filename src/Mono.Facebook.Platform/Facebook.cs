@@ -13,7 +13,6 @@ namespace Mono.Facebook.Platform
     public class Facebook
     {
         #region "Member Variables"
-        private static Facebook _instance = null;
         private const string _unsecure_server_url =  "http://api.facebook.com/bestserver.php";
         private const string _secure_server_url = "https://api.facebook.com/bestserver.php";
         private const string _version = "1.0";
@@ -43,9 +42,9 @@ namespace Mono.Facebook.Platform
         {
             get
             {
-                if (_instance == null)
-                    _instance = new Facebook();
-                return _instance;
+				if (HttpContext.Current.Items["Facebookery"] == null)
+					HttpContext.Current.Items["Facebookery"] = new Facebook();
+				return HttpContext.Current.Items["Facebookery"] as Facebook;
             }
         }
         #endregion
